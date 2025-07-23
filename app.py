@@ -12,10 +12,10 @@ USERS = {
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
 
-# --- Login Form ---
+# --- Login Page ---
 if not st.session_state.logged_in:
     st.set_page_config(page_title="IR CMS Support Hub - Login", layout="centered")
-    st.title("🔐 IR CMS Support Hub Login")
+    st.header("🔐 ATPL CMS Support Hub Login")
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
     if st.button("Login"):
@@ -26,12 +26,13 @@ if not st.session_state.logged_in:
             st.error("Invalid username or password")
     st.stop()
 
-# --- Main Portal Layout ---
-st.set_page_config(page_title="IR CMS Support Hub", layout="wide")
-st.title("🚆 IR CMS Support Hub – Powered by ATPL.")
+# --- Main Portal Page ---
+st.set_page_config(page_title="IR CMS Support Hub", layout="centered")
+st.header("🚆 CMS Support Hub")
 
-# --- Sidebar Topics ---
-st.sidebar.header("📚 Help Topics")
+
+# --- Help Topics ---
+st.markdown("## 📚 Help Topics")
 topics = {
     "Download CMS Image": "articles/cms_iso_info.md",
     "How to Make Bootable Pendrive": "articles/bootable_pendrive.md",
@@ -40,11 +41,12 @@ topics = {
     "Test Breath Analyzer Device on Terminal": "articles/ba_terminal.md",
     "Run Photo Clearner Script": "articles/photo_cleaner.md",
     "CMS Helpline Numbers – CRIS Support": "articles/cms_helpline_number.md"
-
 }
-choice = st.sidebar.radio("Select a Topic", list(topics.keys()))
 
-# --- Load and Show Selected Article ---
+with st.expander("📘 Tap to Expand Help Topics"):
+    choice = st.radio("Select a Help Topic:", list(topics.keys()))
+
+# --- Display Selected Article ---
 article_path = Path(topics[choice])
 if article_path.exists():
     with open(article_path, "r", encoding="utf-8") as file:
@@ -52,17 +54,16 @@ if article_path.exists():
 else:
     st.warning("Selected article not found.")
 
-# --- Download Tools Section ---
-st.sidebar.markdown("---")
-st.sidebar.markdown("🧰 **Tools**")
+# --- Download Section ---
+st.markdown("## 🧰 Tool Downloads")
 download_path = "downloads/Rufus_V4.7.exe"
 if os.path.exists(download_path):
     with open(download_path, "rb") as f:
-        st.sidebar.download_button("Download Rufus", f, file_name="Rufus_V4.7.exe")
+        st.download_button("⬇️ Download Rufus Tool", f, file_name="Rufus_V4.7.exe")
 else:
-    st.sidebar.info("Rufus tool not found.")
+    st.info("Rufus tool not found in the downloads folder.")
 
-# --- Footer ---
+# --- Responsive Footer ---
 st.markdown(
     """
     <style>
@@ -75,17 +76,21 @@ st.markdown(
         color: #333;
         text-align: center;
         padding: 10px;
-        font-size: 18px;
+        font-size: 16px;
         border-top: 1px solid #ddd;
         z-index: 100;
     }
+    @media screen and (max-width: 600px) {
+        .footer {
+            font-size: 13px;
+            padding: 8px;
+        }
+    }
     </style>
-
     <div class="footer">
-        🚄 <strong>IR CMS Support Hub</strong> – Powered by <strong>Addsoft Technologies Pvt. Ltd.</strong><br>
-        👨‍💻 Developed & Maintained by <strong>Mohammad Imran</strong><br>
-        📧 <a href="mailto:addsoft@addsofttech.com">addsoft@addsofttech.com</a>
-        📞 Contact: +91-9982134193
+        🚄 <strong>Addsoft CMS Support Hub</strong><br>
+        👨‍💻 Developed by <strong>Mohammad Imran</strong> | 
+        📞 +91-9982134193
     </div>
     """,
     unsafe_allow_html=True
