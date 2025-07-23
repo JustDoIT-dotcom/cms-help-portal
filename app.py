@@ -28,7 +28,7 @@ if not st.session_state.logged_in:
 
 # --- Main Portal Layout ---
 st.set_page_config(page_title="IR CMS Support Hub", layout="wide")
-st.title("🚆 IR CMS Support Hub – Powered by Addsoft Technologies Pvt. Ltd.")
+st.title("🚆 IR CMS Support Hub – Powered by ATPL.")
 
 # --- Sidebar Topics ---
 st.sidebar.header("📚 Help Topics")
