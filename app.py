@@ -88,8 +88,8 @@ st.markdown(
     }
     </style>
     <div class="footer">
-        🚄 <strong>Addsoft CMS Support Hub</strong><br>
-        👨‍💻 Developed by <strong>Mohammad Imran</strong> | 
+        🚄 <strong>Powered by <strong>Addsoft</strong><br>
+        👨‍💻 Developed by <strong>Mohammad Imran</strong><br> 
         📞 +91-9982134193
     </div>
     """,
