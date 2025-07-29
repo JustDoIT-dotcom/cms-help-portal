@@ -6,8 +6,8 @@ import csv
 
 # --- Login Setup ---
 USERS = {
-    "admin": "admin123",
-    "engineer": "cms@123"
+    "admin": "admin@193",
+    "cms": "cms@123"
 }
 
 if "logged_in" not in st.session_state:
