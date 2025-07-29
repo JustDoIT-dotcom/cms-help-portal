@@ -58,7 +58,7 @@ if st.session_state.username == "admin":
         st.info("Feedback file not found.")
 
 # --- Engineer: Full CMS Help & Feedback Form ---
-elif st.session_state.username == "engineer":
+elif st.session_state.username == "cms":
     st.header("🚆 CMS Support Hub")
 
     # --- Help Topics Section ---
