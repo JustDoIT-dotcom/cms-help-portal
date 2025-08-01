@@ -69,6 +69,7 @@ elif st.session_state.username == "cms":
         "How to Install CMS Image": "articles/install_cms_image.md",
         "How to Check installed CMS Image Version": "articles/installed_image_version.md",
         "Test Breath Analyzer Device on Terminal": "articles/ba_terminal.md",
+        "How to Update BA API": "articles/update_ba_api.md",
         "Run Photo Clearner Script": "articles/photo_cleaner.md",
         "Registration Page Not Opening During CREW Sign On/Off": "articles/crew_registration_popup_issue.md",
         "CMS Helpline Numbers – CRIS Support": "articles/cms_helpline_number.md",
