@@ -93,19 +93,7 @@ elif st.session_state.username == "cms":
                 """, unsafe_allow_html=True)
                 st.download_button("📥 Download PDF", data=open(file_path, "rb"), file_name=file_path.name)
 
-    # --- Feedback Section ---
-    st.markdown("## 📝 Submit Feedback")
-    name = st.text_input("Your Name")
-    mobile = st.text_input("Mobile Number")
-    feedback = st.text_area("Your Feedback")
-    if st.button("Submit Feedback"):
-        if name and mobile and feedback:
-            with open("feedback.csv", "a", newline="") as f:
-                writer = csv.writer(f)
-                writer.writerow([name, mobile, feedback])
-            st.success("✅ Thank you! Feedback submitted.")
-        else:
-            st.error("Please fill in all fields before submitting.")
+
 
 # --- Footer ---
 st.markdown(
