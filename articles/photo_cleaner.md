@@ -12,15 +12,15 @@ Follow these steps to run the **Photo Cleaner Script** on your Thin-Client syste
 
 2. **Run the Photo Cleaner Script**
    - In the terminal, type the following command and press `Enter`:
-     ```bash
-     sudo /home/babio/Desktop/photo.sh
+      ```bash
+     sudo setup
      ```
-   - If prompted for a password, enter:  
+     - If prompted for a password, enter:  
      **`111`**
+3. ✅ Choose Option number ***4***
 
-3. ✅ **Important:**  
+4. ✅ **Important:**  
    - Run the **Photo Cleaner Script** at least **3–4 times** for a complete cleanup.
 
 ---
 
-💡 *Make sure the script file `photo.sh` exists on the desktop. Contact support if not found.*

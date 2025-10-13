@@ -15,8 +15,12 @@ Follow these steps to check the currently installed CMS image version on your Th
 3. **Run Version Command**
    - Type the following command and press `Enter`:
      ```bash
-     osinfo
+     sudo setup
      ```
+     - If prompted for a password, enter:  
+     **`111`**
+4. ✅ Choose Option number ***1***
+
    - ✅ The output will display the **CMS image version**, build date, and other system info.
 
 ---

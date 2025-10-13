@@ -12,9 +12,9 @@ Follow these steps to **Update BA API** on your Thin-Client system
 2. **Run the Photo Cleaner Script**
    - In the terminal, type the following command and press `Enter`:
      ```bash
-     sudo /home/babio/Downloads/.BKP/BA-API.sh
+     sudo setup
      ```
-   - If prompted for a password, enter:  
+     - If prompted for a password, enter:  
      **`111`**
+3. ✅ Choose Option number ***7***
 
-3. Choose any one option as per screen instruction.

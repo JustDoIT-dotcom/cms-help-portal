@@ -13,12 +13,14 @@ Follow these steps to test the **Breath Analyzer Device** on your Thin-Client sy
 2. **Run the Breath Analyzer Command**
    - In the terminal, type the following command and press `Enter`:
      ```bash
+     sudo setup
+     or
      sudo /usr/local/ba 1 20
      ```
    - If prompted for a password, enter:  
      **`111`**
 
-3. ✅ The **Breath Analyzer** will now run and follow the screen instruction.
+3. ✅ Choose Option number ***5*** from menu Option  and **Breath Analyzer** will now run and follow the screen instruction.
 
 ---
 
