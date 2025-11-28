@@ -39,7 +39,7 @@ def logout():
     st.rerun()
 
 # --- Login Page ---
-NIGSServer_Check()  # Call Check NIGS Server Connection Function
+#NIGSServer_Check()  # Call Check NIGS Server Connection Function
 st.set_page_config(page_title="IR CMS Support Hub", layout="centered")
 if not st.session_state.logged_in:
     st.header("🔐 ATPL CMS Support Hub Login")
