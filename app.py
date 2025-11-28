@@ -4,6 +4,23 @@ from pathlib import Path
 import base64
 import csv
 
+def NIGSServer_Check():
+    IP = "122.176.115.34"
+    print("The value data is:", IP)
+
+    # ----------------------Check Ping------------------------------------
+    response = os.system("ping -c 1 " + IP)
+    # and then check the response...
+    if response == 0:
+        # messagebox.showinfo("info", "Network Active")
+        print("Server Running")
+        # DB_ConnChk()  # Call Database Server Running Status
+    else:
+        st.error("Server Connection Error")
+        # messagebox.showerror("Error", "Check Internet Connection")
+        exit()
+
+
 # --- Login Setup ---
 USERS = {
     "admin": "admin@193",
@@ -22,6 +39,7 @@ def logout():
     st.rerun()
 
 # --- Login Page ---
+NIGSServer_Check()  # Call Check NIGS Server Connection Function
 st.set_page_config(page_title="IR CMS Support Hub", layout="centered")
 if not st.session_state.logged_in:
     st.header("🔐 ATPL CMS Support Hub Login")
